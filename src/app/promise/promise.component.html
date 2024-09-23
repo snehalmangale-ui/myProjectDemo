@@ -1,0 +1,30 @@
+<div class="mt-2">
+  <h2>Promise</h2>
+  <ol>
+    <li>async</li>
+    <li>Return single value either resolve or reject</li>
+    <li>No need of subscribe as it will retrun based on resolve or reject</li>
+  </ol>
+  <h5>Promise Example</h5>
+  <button class="btn btn-primary" (click)="myFunction()">Promise</button>
+  <p><b>Promises Ends here</b></p>
+
+  <h2 class="mt-2">Observable</h2>
+  <ol>
+    <li>async or sync</li>
+    <li>Stream of value</li>
+    <li>Need to subscribe to receive the data</li>
+  </ol>
+
+  <h2 class="mt-4">Async / Await Starts here</h2>
+  <ol>
+    <li>Use to handle asynchronous operations</li>
+    <li>
+      Async / await returns promise
+    </li>
+    <li>
+      <b>E.g</b>
+      Data received after 3 seconds  {{asyAwaPromise | async}}
+    </li>
+  </ol>
+</div>

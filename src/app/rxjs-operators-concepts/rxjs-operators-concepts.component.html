@@ -1,0 +1,33 @@
+<div class="mt-2">
+  <h2 class="mt-4">Async / Await Starts here</h2>
+  <ol>
+    <li>Use to handle asynchronous operations</li>
+    <li>
+      Async / await returns promise
+    </li>
+    <li>
+      <b>E.g</b>
+      Data received after 3 seconds {{asyAwaPromise | async}}
+    </li>
+  </ol>
+  <h2 class="mt-4">Interval </h2>
+  <ol>
+    <li>We can create observablke streams using interval</li>
+    <li>Type of interval method is Observable</li>
+    <li>We need to unsubscribe interval otherwise it will go infinite loop running</li>
+  </ol>
+  <p>Interval : {{ broadCastMsg }}</p>
+  <button class="btn btn-primary" (click)="unsubscribeToInterval()">Unsubscribe</button>
+
+  <h2 class="mt-4">Timer </h2>
+  <ol>
+    <li>Its same as interval but takes two argumernts</li>
+  <br>
+    1.1 after how much time timer should strt
+    <br>
+    1.2 interval
+
+  </ol>
+  <p>Timer : {{ broadCastTimerMsg }}</p>
+  <button class="btn btn-primary" (click)="unsubscribeToTimer()">Unsubscribe</button>
+</div>

@@ -1,0 +1,140 @@
+<div class="mt-2">
+    <h1>Rxjs operator</h1>
+    <h2 class="mt-4">SwitchMap</h2>
+    <ol>
+        <li>Flattening operator - If we have observable within observable then we don't need to subscribe two time</li>
+        <li>Cancellable</li>
+        <li>Difference with othe rflattening operator - Cancelling effect - cancelling request</li>
+        <li>Only takes the latest value to work with</li>
+        <li>Mostly useful in search functionality</li>
+        <li>Real time e.g - if we first search rxjs tutorial then changed the mind
+            and now search for Angular tutorial -
+            then we should get result for angular tutorial -
+            Switch map works best here as it deal with latest value
+        </li>
+    </ol>
+    <ol>
+        <li>
+            from rxjs operator converts Array, an array-like object, a Promise, an iterable object, or an
+            Observable-like object
+            to obsevable
+        </li>
+    </ol>
+    <div>
+        <strong>Ex 01 | Map</strong>
+        <br>
+        <p class="bg-light py-2 border rounded">
+            <strong>Videos : </strong>['Tech', 'Comedy', 'News']
+        </p>
+        <hr>
+        <ul id="elContainer"></ul>
+    </div>
+    <div>
+        <strong>Ex 02 | Map + SwitchAll</strong>
+        <br>
+        <p class="bg-light py-2 border rounded">
+            <strong>Videos : </strong>['Tech', 'Comedy', 'News']
+        </p>
+        <hr>
+        <ul id="elContainer2"></ul>
+    </div>
+    <div>
+        <strong>Ex 03 | SwitchMap</strong>
+        <br>
+        <p class="bg-light py-2 border rounded">
+            <strong>Videos : </strong>['Tech', 'Comedy', 'News']
+        </p>
+        <hr>
+        <ul id="elContainer3"></ul>
+    </div>
+    <h2 class="mt-4">ExhaustMap</h2>
+    <ol>
+        <li>Do not disturb stratagy</li>
+        <li>If we click or request for multiple request then exhaustMap will only work on one request at a time </li>
+        <li>This is useful to improve the performance as even if user clicks multiple time only one request will be go
+            to server</li>
+        <li>E.g</li>
+        <div>
+            <input type="number" id="numberIn" [value]="num">
+            <button class="btn btn-primary" #btn>Save</button>
+            <p>Save data : {{ num }}</p>
+        </div>
+    </ol>
+    <h2>fromEvent</h2>
+    <ol>
+        <li>Creates an Observable that emits events of a specific type coming from the given event target.</li>
+    </ol>
+    <br>
+    <h2>Map operator</h2>
+    <ol>
+        <li>Use to transform the data as per requirement</li>
+        <li>Returns new modified observable</li>
+        <li>E.g 1 Video + data</li>
+        <p>Message <strong>{{msg1}}</strong></p>
+
+        <li> E.g 2 Name from object</li>
+        <ul id="elContainer4"></ul>
+
+    </ol>
+
+    <h2>Filter operator</h2>
+    <ol>
+        <li>Use to filter the data from api response as per requirement</li>
+        <li>Returns new modified observable containing filtered items</li>
+        <li> E.g 1 Filetred Name from object with length less than 3</li>
+        <ul id="elContainer5"></ul>
+
+    </ol>
+
+    <h2>Tap operator</h2>
+    <ol>
+        <li>Transperently perform the actions such as logging i.e without </li>
+        <li>Transperently means without affecting the response</li>
+        <li>To console log the data or response</li>
+        <li>Change the property value without affecting the response</li>
+        <ul id="elContainer6"></ul>
+    </ol>
+
+    <h2>Retry operator</h2>
+    <ol>
+        <li>It is use to resubscribe an observable if it fails </li>
+        <li>Retry is use to retry the api for specified no. of times if there is any error while fetching error</li>
+        <p>{{ dataFromApi | json}}</p>
+    </ol>
+    <h2>RetryWhen operator</h2>
+    <ol>
+        <li>It is use to resubscribe an observable based on condition</li>
+        <li>Return an observable that mirrors the source observable with exception error</li>
+        <li><b>Delay will perform the action after specified delay</b></li>
+        <li><b>Scan operator will scan the method that how many time it executed</b></li>
+        <br>
+        <b>Data from api</b>
+        <p>{{ dataFromApi | json}}</p>
+    </ol>
+    <h2>MergeMap operator</h2>
+    <ol> 
+        <li>Flattening operator</li>
+        <li>Not cancellable</li>
+        <li>Transform items emmited by observable into other observable and then 
+            flattens those observables into a single observable sequence</li>
+        <b>E.g MergeMap</b>
+        <ul id="elContainer7"></ul>
+        <br>
+        <b>E.g Map</b>
+        <li>Problem with map is if we have observable inside observable then we have to subscribe twice</li>
+        <ul id="elContainer8"></ul>
+    </ol>
+
+    <h2>ConcatMap operator</h2>
+    <ol> 
+        <li>Flattening operator</li>
+        <li>Not cancellable</li>
+        <li>If order matters from response</li>
+        <li>It will complete first subscription and then only goes to execute the next data</li>
+        <li>transforms each value emitted by a source observable into an inner observable, 
+            executes it sequentially, and emits the values in the order they were received</li>
+        <b>E.g ConcatMap</b>
+        <ul id="elContainer9"></ul>
+    </ol>
+    
+</div>

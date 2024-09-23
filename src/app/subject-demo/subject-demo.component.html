@@ -1,0 +1,42 @@
+<div class="mt-2">
+    <h2> {{exclusive ? 'Exclusive | ' : ''}}Subject</h2>
+    <ol>
+        <li>Cross component data communication</li>
+        <li>Obervable is having observable ( pipe, subscribe ) and observer ( next, error, complete )</li>
+        <li>But subject is both observable and observer</li>
+        <li>Means we can emit the data using next and also subscribe to it</li>
+        <li>Subject is multicasting which means execution shared amongs multiple subscribers</li>
+        <b>E.g Subject</b>
+        <p *ngIf="exclusive">Subject is Exclusive topic</p>
+    </ol>
+    <h2> {{exclusiveBehav ? 'Exclusive | ' : ''}}Behaviour Subject</h2>
+    <ol>
+        <li>Same as subject but it takes default which is not possible with subject</li>
+        <b>E.g Behavior Subject | </b>
+        <p *ngIf="exclusiveBehav">Behavior Subject is Exclusive topic</p>
+
+    </ol>
+
+    <h2>ng-container</h2>
+    <ol>
+        <li>We can use it as container</li>
+        <li>Don’t add extra element in DOM</li>
+        <li>As we cant add more  than one directive on elements so it will add unnecessary elements in DOM so we can use ng-container</li>
+        <b>E.g Behavior Subject | </b>
+        <ng-container *ngIf="exclusiveBehav">
+            <p *ngFor="let ele of arrOfColors">{{ ele }}</p>
+        </ng-container>
+    </ol>
+
+    <h2>ng-template</h2>
+    <ol>
+        <li>Display hidden template content when needed </li>
+        <li>Content inside this doesn't load immediately</li>
+        <li>we show this content based on condition</li>
+        <b>E.g Behavior Subject | </b>
+        <ng-container *ngIf="exclusiveBehav">
+            <p *ngFor="let ele of arrOfColors">{{ ele }}</p>
+        </ng-container>
+    </ol>
+
+</div>

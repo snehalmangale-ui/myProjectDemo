@@ -1,0 +1,41 @@
+<div class="mt-2">
+  <h2>Directives</h2>
+  <ol>
+    <li>Dom manipulation</li>
+    <li>Apply styles</li>
+    <li>Types are</li>
+    <ul>
+      <li>
+        Component
+      </li>
+      <li>
+        Structural directives
+        <ol>
+          <li>Dom manipulation is done by structural directives</li>
+          <li>Add or remove element to or from DOM</li>
+          <li>Inbuilt structural directives are ngIf, ngFor, ngSwitch</li>
+        </ol>
+      </li>
+      <li>
+        Attribute directives
+        <ol>
+          <li>Look and feel of element can be changed using attribute directives</li>
+          <li>Inbuilt structural directives are ngClass, ngStyle</li>
+          <li>E.g</li>
+          <p [ngStyle]="isStyleTrue ? {color:'green', fontWeight:'bold'} : {color:'red'}">ng Style example</p>
+          <p appCustomFocus [ngClass]="isStyleTrue ? 'active' : 'inactive'">ng Class example</p>
+          <button class="btn btn-primary" (click)="changeTextColor()">Change text color</button>
+        </ol>
+      </li>
+      <li>Custom Atrribute directive</li>
+      <p appCustomFocus>Custom attibute directive (bold it) example</p>
+      <li>Custom Structural directive</li>
+      <li>an input that will determine whether to show or hide the content (@Input)</li>
+      <li>a reference to the template that we want to conditionally display (TemplateRef)</li>
+      <li>a container that will provide us with access to Angular's view (ViewContainerRef)</li>
+      <strong *appCustomDisplay="true">custom structural directive display example</strong>
+      <strong *appCustomDisplay="false">custom structural directive display example</strong>
+    </ul>
+  </ol>
+
+</div>

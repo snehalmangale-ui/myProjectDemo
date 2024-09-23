@@ -1,0 +1,17 @@
+<app-my-counter></app-my-counter>
+<p>Count and data in app component</p>
+<div>Current Count: {{ countData$ | async }}</div>
+<div>Current data : {{ dataModify$ | async }}</div>
+<p><b>Ngrx store concept ends here</b></p>
+<br> 
+<br>
+
+<p><b>Promises Satrts here</b></p>
+<app-promise></app-promise>
+<p><b>RxJs operators Satrts here commented as there is timer and interval</b></p>
+
+<!-- <app-rxjs-operators-concepts></app-rxjs-operators-concepts> -->
+<button class="btn btn-primary" (click)="goToSubjectDemo()">Go to Other component</button>
+<app-switch-map></app-switch-map>
+<router-outlet></router-outlet>
+<app-directive-demo></app-directive-demo>
